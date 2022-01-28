@@ -8,6 +8,9 @@ body{
     padding: 0;
     position: static;
     width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: 
     linear-gradient(to bottom, #000000DD, #00000040),
     url("../assets/background.jpg");
@@ -123,8 +126,12 @@ h5{
     background-color: black;
 }
 
+.bg-narrow{
+    height: 400px;
+}
+
 .card{
-    top: 200px;
+    top: 35%;
     color: white;
     display: block;
     position: relative;
@@ -187,4 +194,33 @@ h5{
 
 .bg-2{
     /* waiting background */
+}
+
+.bg-3{
+    height: 1000px;
+}
+
+.faq{
+    position: relative;
+    top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+}
+
+.faq-head{
+    margin-bottom: 50px;
+}
+
+.q-but{
+    font-size: 24px;
+    border-radius: 5px;
+    height:80px;
+    width: 50%;
+    margin: 5px 10px 10px 5px;
+    text-align: left;
+    text-indent: 16px;
+    background-color: rgb(46, 46, 46);
+    color: white;
 }
