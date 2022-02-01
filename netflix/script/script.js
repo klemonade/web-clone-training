@@ -1,1 +1,1 @@
-fucntion 
+fucntion s
