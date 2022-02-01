@@ -41,6 +41,9 @@ input{
 }
 
 button{
+    border-style: solid;
+    border: none;
+    border-bottom: #c9c9c940;
     font-size: 16px;
     border-radius: 5px;
     height:35px;
@@ -244,7 +247,6 @@ h5{
 
 .drop-txt{
     display: none;
-    /* height: 0px; */
     transition: height 0.5s;
     font-size: 24px;
     position: relative;
@@ -259,4 +261,60 @@ h5{
 
 .blank-0{
     height: 200px;
+}
+
+.footer{
+    padding-top: 30px;
+}
+
+.footer-container{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row
+}
+
+a{
+    flex-basis: auto;
+    padding: 40px;
+    justify-content: center;
+}
+.detail{
+    margin: auto;
+    width: 50%;
+    background-color: rgb(46, 46, 46);
+}
+
+.detail .detail-content {
+    display: block; 
+    font-size: 24px;
+    text-align: left;
+    transition: all 0.75s ease; 
+    overflow: hidden;
+    height: 0px;
+    padding: 0 20px 0 20px;
+}
+.detail.active .detail-content {
+    font-size: 24px;
+    position: relative;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 0 20px 0 20px;
+    
+    color: white;
+    height: 275px
+}
+
+.but-faq{
+    background-color: rgb(46, 46, 46);
+    color: white;
+    display: block; 
+    width: 100%; 
+    margin: 0; 
+    height: 80px;
+    font-size: 24px;
+    text-align: left;
+    text-indent: 16px;
+    background-color: rgb(46, 46, 46);
+    color: white;
 }
