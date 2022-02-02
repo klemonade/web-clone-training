@@ -382,16 +382,23 @@ p{
 
 .footer .lang-dropdown{
     margin-top: 20px;
-    background-color: rgb(41, 41, 41);
+    margin-bottom: 20px;
     border: darkgray solid 1px;
 }
 
+.footer li a {
+    font-size: 14px;
+}
+
 a{
-    /* text-decoration: none; */
     color: darkgray;
     text-decoration: none;
 }
 
 a:hover{
     text-decoration: underline;
+}
+
+.copyright{
+    font-size: 14px;
 }
