@@ -81,13 +81,16 @@ button{
 }
 
 .get-started{
+    position: relative;
+    top: 3px;
     padding: 0;
     margin-left: 0;
-    height: 70px;
+    height: 66px;
     width: 200px;
     background-color: red;
     color: white;
     font-size: 22px;
+    border-radius: 2px;
 }
 
 .email-input{
@@ -263,22 +266,7 @@ h5{
     height: 200px;
 }
 
-.footer{
-    padding-top: 30px;
-}
 
-.footer-container{
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-direction: row
-}
-
-a{
-    flex-basis: auto;
-    padding: 40px;
-    justify-content: center;
-}
 .detail{
     margin: auto;
     width: 50%;
@@ -291,7 +279,7 @@ a{
     display: block;
     font-size: 24px;
     text-align: left;
-    transition: all 0.75s ease;
+    transition: all 0.5s ease;
     overflow: hidden;
     height: 0px;
     padding: 0px 20px 0px 20px;
@@ -351,4 +339,25 @@ p{
 
 #detail-6.detail.active .detail-content {
     height: 220px;
+}
+
+.bg-4{
+
+}
+
+.footer{
+    padding-top: 30px;
+}
+
+.footer-container{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row
+}
+
+a{
+    flex-basis: auto;
+    padding: 40px;
+    justify-content: center;
 }
