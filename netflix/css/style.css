@@ -352,17 +352,21 @@ p{
     padding-top: 30px;
 }
 
-.footer-container{
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-direction: row
+.footer-link-container{
+    /* width: 100%; */
+    /* margin: auto; */
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .footer{
     color: darkgray;
     width: 1000px;
     margin: auto;
+}
+
+.footer p{
+    padding: 0px;
 }
 
 .footer li{
