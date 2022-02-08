@@ -1,6 +1,7 @@
 body{
     /* background-color: black; */
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .background-0{
@@ -48,7 +49,7 @@ button{
     font-size: 16px;
     border-radius: 5px;
     height:35px;
-    width: 100px;
+    width: 90px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -343,22 +344,60 @@ p{
 }
 
 .bg-4{
-
+    height: 460px;
 }
 
 .footer{
     padding-top: 30px;
 }
 
-.footer-container{
-    width: 50%;
+.footer-link-container{
+    /* width: 100%; */
+    /* margin: auto; */
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.footer{
+    color: darkgray;
+    width: 1000px;
     margin: auto;
-    display: flex;
-    flex-direction: row
+}
+
+.footer p{
+    padding: 0px;
+}
+
+.footer li{
+    width: 24%;
+    margin-top: 20px;
+    padding: 0px;
+    display: inline-block;
+}
+
+.footer .copyright{
+    margin-top: 20px
+}
+
+.footer .lang-dropdown{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: darkgray solid 1px;
+}
+
+.footer li a {
+    font-size: 14px;
 }
 
 a{
-    flex-basis: auto;
-    padding: 40px;
-    justify-content: center;
+    color: darkgray;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.copyright{
+    font-size: 14px;
 }
