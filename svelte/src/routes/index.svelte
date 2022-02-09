@@ -1,5 +1,7 @@
 <script>
-    import { each } from "svelte/internal";
+    import { each, toggle_class } from "svelte/internal";
+    let status = Array(7).fill("inactive")
+    let detail = ["d-1", "d-2", "d-3", "d-4", "d-5", "d-6", "d-7"]
     let faq = [
         [
             "What is Netflix?", 
@@ -29,8 +31,18 @@
         
             "The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.\nKids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see."]
         ]
-    console.log(faq);
-    // window["qa"] = faq
+
+        function handleClick(e, i){
+            if (status[i] === 'inactive'){
+                e.srcElement.children[0].innerText = 'X'
+                status[i] = ''
+            } else{
+                status[i] = 'inactive'
+                e.srcElement.children[0].innerText = '+'
+            }
+        }
+
+
 </script>
 
 
@@ -110,15 +122,23 @@
         <h1 class="mx-auto text-6xl font-medium my-8 w-5/6 text-white text-center">
             Frequently Asked Question
         </h1>
-        <div class="my-8">
-            {#each faq as qa}
-                <div class="my-2 max-w-screen-md">
-                    <button class="w-2/3">
+        <ul class="my-10 max-w-screen-md w-7/8 mx-auto">
+            {#each faq as qa, i}
+                <li class="my-2 faq {status[i]}">
+                    <button class="w-full text-left indent-8 bg-gray-600 border-b-2 border-black text-white h-20 text-3xl inline-block " on:click={e => handleClick(e, i)}>
                         {qa[0]}
+                        <div class="drop inline-block float-right right-8 relative">
+                                +
+                        </div>
                     </button>
-                </div>
+                    <div class="detail {detail[i]}  overflow-hidden bg-gray-600">
+                        <p class=" text-white p-8 text-xl ">
+                            {qa[1]}
+                        </p>
+                    </div>
+                </li>
             {/each}
-        </div>
+        </ul>
         
 
     </div>
@@ -141,5 +161,33 @@
         background-color: rgb(114, 114, 114);
         height: 5px;
     }
+    .detail{
+        transition: all 0.5s ease;
+        margin: 0;
+        padding: 0 1rem;
+    }
 
+    .detail.d-1{
+        height: 232px;
+    }
+
+    .detail.d-2{
+        height: 148px;
+    }
+
+    .detail.d-3{
+        height: 260px;
+    }
+
+    .detail.d-4, .detail.d-5{
+        height: 148px;
+    }
+
+    .detail.d-6{
+        height: 204px;
+    }
+
+    .faq.inactive .detail{
+        height: 0px;
+    }
 </style>
